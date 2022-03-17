@@ -38,10 +38,10 @@ dispatcher = updater.dispatcher
 
 tc = TelegramCommand(_env)
 
-start_handler = CommandHandler('start', tc.start())
+start_handler = CommandHandler('start', tc.start)
 dispatcher.add_handler(start_handler)
 
-help_handler = CommandHandler('help', tc.help())
+help_handler = CommandHandler('help', tc.help)
 dispatcher.add_handler(help_handler)
 
 updater.start_polling()
