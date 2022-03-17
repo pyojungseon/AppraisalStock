@@ -44,5 +44,8 @@ dispatcher.add_handler(start_handler)
 help_handler = CommandHandler('help', tc.help)
 dispatcher.add_handler(help_handler)
 
+get_handler = CommandHandler('start', tc.getPrice)
+dispatcher.add_handler(get_handler)
+
 updater.start_polling()
 updater.idle()
