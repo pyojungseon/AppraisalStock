@@ -2,7 +2,8 @@ from rabbitMQ.msgQPublisher import MsgQPublisher
 import time
 import configparser
 
-class Telegram:
+
+class TelegramBot:
 
     env = None
     msgQ = None
@@ -18,7 +19,7 @@ class Telegram:
     def getConfig(self, env):
         properties = configparser.ConfigParser()
         properties.read('./config/config.ini')
-        if env=='T':
+        if env == 'T':
             props = properties["TEST"]
         else:
             props = properties["PROD"]
