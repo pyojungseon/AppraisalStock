@@ -1,10 +1,10 @@
 from TelegramBot import TelegramBot
 
-_env = ''
-tg = ''
-
 
 class TelegramCommand:
+
+    _env = ''
+    tg = ''
 
     def __init__(self, _env):
         print('init telegramBot command')
@@ -18,11 +18,11 @@ class TelegramCommand:
         text = "[AppraisalStock] " + ". 사용법을 알고싶으시면 /help를 입력하여주세요"
         msg = self._env + "||" + str(update.effective_chat.id) + "||" + text
         print(msg)
-        tg.sendMsg(msg)
+        self.tg.sendMsg(msg)
 
     def help(self, update, context):
         text = '''/get : 주가 정보
                 \n개발중.'''
         msg = self._env + "||" + str(update.effective_chat.id) + "||" + text
         print(msg)
-        tg.sendMsg(msg)
+        self.tg.sendMsg(msg)
