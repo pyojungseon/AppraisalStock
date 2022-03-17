@@ -26,7 +26,7 @@ class TelegramBot:
         print("Mode : %s" % props["env"])
         return props
 
-    def sendData(self, data):
-        msg = self.env+"||"+"2026330004"+"||["+str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))+"]"+data
+    def sendMsg(self, msg):
+        # msg = self.env+"||"+"2026330004"+"||["+str(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))+"]"+data
         print(msg)
         self.msgQ.send(msg)
