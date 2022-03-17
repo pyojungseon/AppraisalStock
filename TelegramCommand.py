@@ -1,4 +1,4 @@
-import TelegramBot
+from TelegramBot import TelegramBot
 
 _env = ''
 tg = ''
