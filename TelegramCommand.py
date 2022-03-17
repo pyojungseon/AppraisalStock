@@ -18,10 +18,12 @@ class TelegramCommand:
             env_name = '[TEST]'
         text = "[AppraisalStock] " + env_name + ". 사용법을 알고싶으시면 /help를 입력하여주세요"
         msg = _env + "||" + str(update.effective_chat.id) + "||" + text
+        print(msg)
         tg.sendMsg(msg)
 
     def help(self, update, context):
         text = '''/get : 주가 정보
                 \n개발중.'''
         msg = _env + "||" + str(update.effective_chat.id) + "||" + text
+        print(msg)
         tg.sendMsg(msg)

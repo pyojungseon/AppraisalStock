@@ -25,7 +25,7 @@ elif sys.argv[1] != 'P' and sys.argv[1] != 'T':
     print("Check Arguments : [P]/[T]")
     sys.exit()
 else :
-    env = sys.argv[1]
+    _env = sys.argv[1]
 
 
 # set properties
