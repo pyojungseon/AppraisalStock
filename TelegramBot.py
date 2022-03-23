@@ -1,5 +1,4 @@
 from rabbitMQ.msgQPublisher import MsgQPublisher
-import time
 import configparser
 
 
