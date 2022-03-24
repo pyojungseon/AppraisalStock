@@ -16,7 +16,7 @@ class RestAPI:
         self.props = self.getConfig(_env)
 
     def __del__(self):
-        print("Notice Destructor")
+        print("RestAPI Destructor")
 
     def getConfig(self, env):
         properties = configparser.ConfigParser()
@@ -25,7 +25,6 @@ class RestAPI:
             props = properties["TEST"]
         else:
             props = properties["PROD"]
-        print("Mode : %s" % props["env"])
         return props
 
     def send_api(self, path, method):
