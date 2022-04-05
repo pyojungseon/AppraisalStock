@@ -40,6 +40,8 @@ class RestAPI:
                 response = requests.post(url, json=body)
             elif method == 'PUT':
                 response = requests.put(url, json=body)
+            elif method == 'DELETE':
+                response = requests.delete(url, json=body)
 
             print("response status %r" % response.status_code)
             print("response data %r" % response.text)
